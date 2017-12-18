@@ -3,19 +3,21 @@ PHP Framework
 
 ---
 ```
-PHP轻框架 ZeroPHP
-BY : Anke Wang
+ZeroPHP是一个PHP轻框架
+适合小型项目的快速搭建
+提供路由配置、MVC、PDO
+开发者 : Anke Wang
 ```
 
 ---
 
 ## 目录说明：
 - app ：项目目录
-  - controller : 控制器
-  - view ：视图
+ - controller : 控制器
+ - view ：视图
 - conf : 配置文件
-  - config.php : 程序参数
-  - route.php : 路由配置
+ - config.php : 程序参数
+ - route.php : 路由配置
 - zero : 框架内核
 - vendor : 第三方扩展
 
