@@ -27,6 +27,16 @@ class Controller
 		$this->Response()->statusPrint($status, $msg);
 	}
 
+	public function render($tpl_name, $params = array()) {
+		ob_start();
+		extract($params);
+		include_once(TEMPLATE_ROOT . '/' . $tpl_name . '.tpl.php');
+		$string = ob_get_contents();
+		ob_end_clean();
+		$response = new Response($string);
+		$response->send();
+	}
+
 	public function redirect($uri) 
 	{
 		$this->Response()->redirect($uri);

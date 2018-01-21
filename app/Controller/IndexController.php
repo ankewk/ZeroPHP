@@ -1,7 +1,7 @@
 <?php
-// namespace Controller;
+use Zero\Controller;
 
-class IndexController
+class IndexController extends Controller
 {
 
     public function __construct() 
@@ -10,6 +10,7 @@ class IndexController
     }
     public function indexZero()
     {
-        echo "hello ZeroPHP";
+        $conf = ['author' => 'Anke Wang'];
+        $this->render('Index', ["val" => $conf]);
     }
 }
