@@ -1,10 +1,7 @@
 <?php
+// namespace Controller;
 
-namespace Controller;
-
-use Zero\Controller;
-
-class IndexController extends Controller
+class IndexController
 {
 
     public function __construct() 
@@ -13,6 +10,6 @@ class IndexController extends Controller
     }
     public function indexZero()
     {
-        echo 1;
+        echo "hello ZeroPHP";
     }
 }

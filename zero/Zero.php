@@ -1,9 +1,5 @@
 <?php
-
 namespace Zero;
-
-use Zero\Request;
-use Zero\Response;
 
 include_once __DIR__ . "/../conf/config.php";
 
@@ -23,11 +19,13 @@ class Zero
 		if(isset($route[$now_route])) {
 			$routeConfig = $route[$now_route];
 			$class = $routeConfig[0] . 'Controller';
+			//@TODO class not autoload
+			include_once dirname(__FILE__) . "/../app/Controller/{$class}.php";
 			$class = new $class;
-			var_dump($class);exit;
 			$routefile = [new $class, $routeConfig[1].'Zero'];
-			// $parameter = isset($routeConfig[2]) ? $routeConfig[2] : array();
-			$response = call_user_func_array($routefile);
+			$parameter = isset($routeConfig[2]) ? $routeConfig[2] : [];
+			$response = call_user_func_array($routefile, $parameter);
+			$response = new Response();
 		} else {
 			$response = new Response('<center><h1>404 page not found!</h1></center>');
 		}

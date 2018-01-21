@@ -1,5 +1,4 @@
 <?php
-
 namespace Zero;
 
 class Response
