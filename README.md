@@ -35,3 +35,22 @@ ZeroPHP是一个PHP轻框架
 ---
 
 ## demo
+在 路由：Domain/hello 页面下输出Hello PHP!
+```
+1.在conf/route.php 
+下面配置路由如下：
+$route['/hello'] = ['Index', 'hello']; //Index控制器下面的helloZero方法实现业务逻辑
+2.编写控制器文件 /app/Controller/IndexController.php 
+代码如下：
+public function helloZero()
+{
+    $conf = ['page_text' => 'Hello PHP!'];
+    $this->render('Hello', ["val" => $conf]); //调用app/View/Hello.tpl.php 视图文件
+}
+3.浏览器打开 domain/hello 页面就会输出Hello PHP! [这里domain是指你的主机]
+```
+
+---
+
+## 插件
+后续会编写用于 REST API 的Composer包。

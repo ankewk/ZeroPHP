@@ -13,4 +13,10 @@ class IndexController extends Controller
         $conf = ['author' => 'Anke Wang'];
         $this->render('Index', ["val" => $conf]);
     }
+
+    public function helloZero()
+    {
+        $conf = ['page_text' => 'Hello PHP!'];
+        $this->render('Hello', ["val" => $conf]);
+    }
 }
