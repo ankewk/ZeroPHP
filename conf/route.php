@@ -1,7 +1,7 @@
 <?php
-$route = array();
+$route = [];
 //System
 $route['/'] = ['Index', 'index'];
 
 //project
-$route['/hello'] = ['Index', 'hello'];
+$route['/hello'] = ['Hello', 'hello'];

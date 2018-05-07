@@ -1,5 +1,5 @@
 <html>
     <body>
-    <span><?php echo $val['page_text'];?></span>
+    <span><?php echo $page_text;?></span>
     </body>
 </html>
