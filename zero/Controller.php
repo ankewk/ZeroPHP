@@ -22,6 +22,11 @@ class Controller
 		return new Response($response);
 	}
 
+	public function dataPrint($data)
+	{
+		$this->Response()->dataPrint($data);
+	}
+
 	public function statusPrint($status, $msg = '') 
 	{
 		$this->Response()->statusPrint($status, $msg);

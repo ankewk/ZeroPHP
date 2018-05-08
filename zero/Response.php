@@ -24,7 +24,7 @@ class Response
 
 	public function statusPrint($status, $msg) 
 	{
-		$data = [$status, $msg];
+		$data = ['status' => $status, 'msg' => $msg];
 		header("Content-type: application/json");
 		print json_encode($data);
 		exit;
