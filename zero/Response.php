@@ -22,6 +22,14 @@ class Response
 		exit;
 	}
 
+	public function statusPrint($status, $msg) 
+	{
+		$data = [$status, $msg];
+		header("Content-type: application/json");
+		print json_encode($data);
+		exit;
+	}
+
 	public function redirect($uri) 
 	{
 		Header('Location:' . $uri);
