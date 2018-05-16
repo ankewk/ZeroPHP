@@ -31,7 +31,7 @@ ZeroPHP是一个PHP轻框架
 
 ## 安装
 1.composer 安装
-
+composer global require "ankewk/zerophp:dev-master"
 
 ---
 
@@ -95,4 +95,6 @@ public function getText()
 ```
 1.基于PHP开发的微信管理后台ZeroCms 
 https://github.com/ankewk/ZeroCms
+2.基于ZeroPHP研发的中国支付API composer包easypay
+https://github.com/ankewk/easypay
 ```
