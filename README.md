@@ -29,6 +29,12 @@ ZeroPHP是一个PHP轻框架
 
 ---
 
+## 安装
+1.composer 安装
+
+
+---
+
 ## 目录说明：
 - app ：项目目录
  - Controller : 控制器
