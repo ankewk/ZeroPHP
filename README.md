@@ -5,10 +5,10 @@ PHP Framework
 
 ## 设计思想
 ```
-简而不是其华，麻雀虽小，五脏俱全。
-是ZeroPHP这个微框架的设计思想
+简而不失其华。
+ZeroPHP这个微框架的设计思想。
 天下武功，唯快不破。
-在Web领域JS的快速发展，使得H5等Web应用的REST API程度越来越高。
+在Web领域JS的快速发展下，使得H5等Web应用的REST API程度越来越高。
 如果你只是做一些非大型Web项目的。
 例如基于PHP做微信Campain、H5 APP、Min Web Application等。 
 ZeroPHP就是你的绝佳选型框架。
@@ -30,12 +30,13 @@ ZeroPHP是一个PHP轻框架
 ---
 
 ## 安装
-1.composer 安装
+````
 composer global require "ankewk/zerophp:dev-master"
+```
 
 ---
 
-## 目录说明：
+## 框架结构
 ```
 - app ：项目
  - Model ：数据模型
@@ -53,8 +54,8 @@ composer global require "ankewk/zerophp:dev-master"
 
 ## 应用
 ```
-1.基于PHP开发的微信管理后台ZeroCms 
+1.ZeroCms 基于ZeroPHP开发的微信管理后台
 https://github.com/ankewk/ZeroCms
-2.基于ZeroPHP研发的中国支付API composer包easypay
+2.easypay 基于ZeroPHP研发的中国支付API composer包
 https://github.com/ankewk/easypay
 ```
