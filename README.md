@@ -21,16 +21,16 @@ ZeroPHP就是你的绝佳选型框架。
 
 ## 框架
 ```
-ZeroPHP是一个PHP轻框架
-适合小型项目的快速搭建
-集成Route MVC PDO
+ZeroPHP是一个PHP轻框架。
+适合小型项目的快速搭建。
+Route MVC PDO
 开发者 : Anke
 ```
 
 ---
 
 ## 安装
-````
+```
 composer global require "ankewk/zerophp:dev-master"
 ```
 
