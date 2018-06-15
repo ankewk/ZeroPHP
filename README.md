@@ -54,8 +54,10 @@ composer global require "ankewk/zerophp:dev-master"
 
 ## 应用
 ```
-1.ZeroCms 基于ZeroPHP开发的微信管理后台
+1.ZeroPHP 文档与使用
+https://github.com/ankewk/ZeroPHPDoc
+2.ZeroCms 基于ZeroPHP开发的微信管理后台
 https://github.com/ankewk/ZeroCms
-2.easypay 基于ZeroPHP研发的中国支付API composer包
+3.easypay 基于ZeroPHP研发的中国支付API composer包
 https://github.com/ankewk/easypay
 ```
