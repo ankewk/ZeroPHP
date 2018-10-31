@@ -24,6 +24,7 @@ ZeroPHP就是你的绝佳选型框架。
 ZeroPHP是一个PHP轻框架。
 适合小型项目的快速搭建。
 Route MVC PDO
+集成EasyCSV EasyApi
 开发者 : Anke
 ```
 
@@ -56,8 +57,17 @@ composer global require "ankewk/zerophp:dev-master"
 ```
 1.ZeroPHP 文档与使用
 https://github.com/ankewk/ZeroPHPDoc
-2.ZeroCms 基于ZeroPHP开发的微信管理后台
+2.ZeroCms 基于ZeroPHP开发的开源微信CMS系统
 https://github.com/ankewk/ZeroCms
-3.easypay 基于ZeroPHP研发的中国支付API composer包
-https://github.com/ankewk/easypay
+3.ZeroCms 基于ZeroPHP开发的博客系统
+https://github.com/ankewk/ZeroBlog
+```
+---
+
+## FAQ
+```
+Q:为什么ZeroPHP框架看起来很小?
+A:因为它的初衷是微框架，当然它是基于组件化的，你可以在它的基础上构建适合你的大型框架结构。
+比如说你觉得laravel的migration很好用，那么你可以在ZeroPHP里面加入Doctrine。
+具体可以参考ZeroCms、ZeroBlog这两个项目，就是用doctrine来构建数据持久化。
 ```
