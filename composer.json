@@ -15,7 +15,7 @@
     "autoload": {
     	"psr-4": {
             "": "app",
-    		"Zero\\": "zero"
+            "Zero\\": "zero"
     	}
     },
     "extra": {

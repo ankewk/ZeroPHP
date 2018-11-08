@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+<?php
+require_once __DIR__ . "/vendor/autoload.php";
+include('./cli/zerophp.php');
