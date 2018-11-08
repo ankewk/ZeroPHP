@@ -47,4 +47,26 @@ class Controller
 		$this->Response()->redirect($uri);
 	}
 
+	public function create($file)
+	{
+        $filePath = dirname(dirname(__FILE__)).'/app/Controller/'. $file . 'Controller.php';
+		$content = "<?php
+
+namespace Controller;		
+
+use Zero\Controller;
+use Model\CommonModel;
+		
+class {$file}Controller extends Controller
+{
+
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
+}";
+        file_put_contents($filePath,$content);
+	}
+
 }

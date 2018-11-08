@@ -66,5 +66,24 @@ class Model
 			return TRUE;
 		return FALSE;
 	}
+
+	public function create($file)
+	{
+		$filePath = dirname(dirname(__FILE__)).'/app/Model/'. $file . 'Model.php';
+		$content = "<?php
+
+namespace Model;
+
+use Zero\Model;
+
+class {$file}Model extends Model
+{
+	public function __construct()
+	{
+		parent::__construct();
+	}
+}";
+		file_put_contents($filePath,$content);
+	}
 	
 }

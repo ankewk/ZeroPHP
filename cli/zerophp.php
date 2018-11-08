@@ -1,35 +1,39 @@
 <?php
 error_reporting(0);
 use Zero\CLI;
+use Zero\EasyORM;
+use Zero\Controller;
 
 if(!isset($argv[1]))
     welcomeShell();
 callMethod($argv[1]);
 
-function callMethod($input)
+function callMethod($command)
 {
     try{
-        $res = $input = explode(":",$input);
+        $res = $input = explode(":",$command);
         if($res == false)
             throw new Exception('The command failed');  
         $class = '';
         switch($input[0]){
             case 'controller':
-                $class = 'Controller';
+                $class = 'Zero\Controller';
                 break;
             case 'model':
-                $class = 'Model';
+                $class = 'Zero\Model';
                 break;
             case 'view':
-                $class = 'View';
+                $class = 'Zero\View';
                 break;
             case 'orm':
+                include_once dirname(dirname(__FILE__)) . "/conf/config.php";
                 $config = [
                     'dbhost' => DBHOST,
                     'dbname' => DBNAME,
                     'dbuser' => DBUSER,
                     'dbpassword' => DBPASS,
                 ];
+                $class = 'Zero\EasyORM';
                 $path = dirname(dirname(__FILE__)).'/db';
                 EasyORM::config($config,$path);
                 break;
@@ -37,9 +41,10 @@ function callMethod($input)
                 throw new Exception('The command method failed');  
                 break;
         }
-        $callRes = call_user_func_array([$class,"{$input[1]}"],[$input[2]]);
-        if($callRes == false)
+        $callRes = call_user_func_array([$class,$input[1]],[$input[2]]);
+        if($callRes === false)
             throw new Exception('The command param failed');
+        CLI::out("{$command} is exec ok",'green',true);
     }catch(Exception $e){
         CLI::out($e->getMessage(),'red',true);
     }

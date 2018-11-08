@@ -21,6 +21,7 @@ class EasyORM
             self::$db = $pdo;
         }
         self::$path = $path;
+        return;
     }
 
     public static function create()
