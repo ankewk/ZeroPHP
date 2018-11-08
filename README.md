@@ -59,26 +59,26 @@ composer global require "ankewk/zerophp:dev-master"
 ```
 执行 php zerophp
  _____                    _____ __    __ _____
-/__  /  ___ __   ______  |  _  |  |  |  |  _  |
-  / /  / _ \| |_/ /| _ | | (_) |  |--|  | (_) |
- / /__/  __/| |__/ |(_)| |  ___|  |--|  |  ___|
-/____/\___/ |_|    |___| |_|   |__|  |__|_|
-
-Welcome to ZeroPHP Command
-Author Anke  Version v1.0 2018-11-08
-
-Model
-  model:create             Create new Model file in app
-
-View
-  view:create              Create new View file in app
-
-Controller
-  controller:create        Create new controller file in app
-
-Orm
-  orm:create:name          Create the crate table json file of name in your db path
-  orm:alter:name           Create the alter table json file of name in your db path
+###/__  /  ___ __   ______  |  _  |  |  |  |  _  |
+###  / /  / _ \| |_/ /| _ | | (_) |  |--|  | (_) |
+### / /__/  __/| |__/ |(_)| |  ___|  |--|  |  ___|
+###/____/\___/ |_|    |___| |_|   |__|  |__|_|
+###
+###Welcome to ZeroPHP Command
+###Author Anke  Version v1.0 2018-11-08
+###
+###Model
+###  model:create             Create new Model file in app
+###
+###View
+###  view:create              Create new View file in app
+###
+###Controller
+###  controller:create        Create new controller file in app
+###
+###Orm
+###  orm:create:name          Create the crate table json file of name in your db path
+###  orm:alter:name           Create the alter table json file of name in your db path
 ---
 
 ## 应用
