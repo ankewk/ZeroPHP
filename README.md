@@ -32,7 +32,7 @@ Route MVC PDO CLI
 
 ## 安装
 ```
-composer global require "ankewk/zerophp:dev-master"
+v1.0 release
 ```
 
 ---
