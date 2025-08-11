@@ -37,6 +37,62 @@ v1.0 release
 
 ---
 
+## 使用 Docker 运行
+
+本指南将帮助您使用 Docker 快速启动 ZeroPHP 项目。
+
+### 前提条件
+- 已安装 Docker 和 Docker Compose
+
+### 启动步骤
+
+1. **克隆项目**
+   ```bash
+   git clone https://github.com/ankewk/ZeroPHP.git
+   cd ZeroPHP
+   ```
+
+2. **启动容器**
+   使用 Docker Compose 启动服务：
+   ```bash
+   docker-compose up -d
+   ```
+   这将启动两个容器：
+   - MySQL 容器 (端口 33306)
+   - Apache + PHP 容器 (端口 8888)
+
+3. **访问应用**
+   在浏览器中访问：
+   ```
+   http://localhost:8888
+   ```
+
+4. **数据库连接**
+   - 主机: mysql (在容器内部) 或 localhost (从宿主机连接)
+   - 端口: 33306
+   - 用户名: root
+   - 密码: (空)
+   - 数据库名: zero
+
+### 停止服务
+```bash
+ docker-compose down
+```
+
+### 数据持久化
+- MySQL 数据存储在 `mysql_data` 卷中，即使删除容器，数据也会保留
+- 项目文件通过绑定挂载同步，对本地文件的更改会立即反映到容器中
+
+### 注意事项
+1. 确保端口 33306 和 8888 在您的主机上没有被占用
+2. 首次启动时，MySQL 容器会初始化数据库，可能需要几秒钟时间
+3. 如果需要重新构建 Web 容器，可以使用：
+   ```bash
+   docker-compose up -d --build
+   ```
+
+---
+
 ## 框架结构
 ```
 - app ：项目
