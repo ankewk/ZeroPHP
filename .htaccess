@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 允许访问现有的文件和目录
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # 将所有其他请求重定向到 index.php
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
