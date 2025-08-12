@@ -34,8 +34,14 @@ function callMethod($command)
                     'dbpassword' => DBPASS,
                 ];
                 $class = 'Zero\EasyORM';
-                $path = dirname(dirname(__FILE__)).'/db';
+                $path = dirname(dirname(__FILE__)).'/migrations';
                 EasyORM::config($config,$path);
+                break;
+            case 'migrate':
+                include_once dirname(dirname(__FILE__)) . "/conf/config.php";
+                require_once dirname(dirname(__FILE__)) . "/zero/DB.php";
+                require_once dirname(dirname(__FILE__)) . "/zero/Migrate.php";
+                $class = 'Zero\Migrate';
                 break;
             default:
                 throw new Exception('The command method failed');  
@@ -71,8 +77,13 @@ function welcomeShell()
     CLI::out('  controller:create        Create new controller file in app','green',true);
     CLI::out('','',true);
     CLI::out('Orm','red',true);
-    CLI::out('  orm:create:name          Create the crate table json file of name in your db path','green',true);
-    CLI::out('  orm:alter:name           Create the alter table json file of name in your db path','green',true);
+    CLI::out('  orm:create:name          Create the crate table json file of name in your migrations path','green',true);
+    CLI::out('  orm:alter:name           Create the alter table json file of name in your migrations path','green',true);
+    CLI::out('','',true);
+    CLI::out('Migrate','red',true);
+    CLI::out('  migrate:up               Run all pending migrations','green',true);
+    CLI::out('  migrate:down             Rollback the last migration','green',true);
+    CLI::out('  migrate:seed             Run all seed files','green',true);
     exit;
 }
 
